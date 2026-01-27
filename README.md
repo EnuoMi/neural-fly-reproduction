@@ -117,8 +117,6 @@ and the Kalman–Bucy estimator.
 
 These notes include step-by-step derivations  
 that are not explicitly provided in the original paper.
-
-- 📄 [Markdown version](docs/neural_fly_derivation.md)  
 - 📄 [PDF version](docs/neural_fly_derivation.pdf)
 
 ---
