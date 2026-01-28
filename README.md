@@ -1,7 +1,7 @@
 # Neural-Fly Reproduction with Delay-Augmented Regressor
 
 This repository reproduces the Neural-Fly framework  
-(Zhou et al., "Neural-Fly: Learning Wind-Invariant Representations for Gust-Resilient Quadrotor Flight", 2023)  
+(Michael O’Connell and Guanya Shi and Xichen Shi and Kamyar Azizzadenesheli and Anima Anandkumar and Yisong Yue and Soon-Jo Chung, "Neural-Fly enables rapid learning for agile flight in strong winds", 2022)  
 and provides a minimal, physically motivated extension to its regressor structure.
 
 In addition to a faithful baseline reproduction,  
@@ -123,15 +123,20 @@ that are not explicitly provided in the original paper.
 
 ## 5. Results Summary
 
-| Method           | Test MSE | Peak Error |
-|------------------|----------|------------|
-| Baseline         | 0.031    | 0.47       |
-| PWM Delay (3)    | 0.024    | 0.31       |
+We report the **mean absolute error (MAE)** on the test set under different wind conditions.  
+Results are grouped by wind intensity and compared between the baseline Neural-Fly model  
+and the delay-augmented regressor.
 
-The delay-augmented regressor consistently reduces peak tracking error  
-and improves phase alignment of the predicted aerodynamic residual.
+| Wind Condition | Baseline MAE | Delay-Augmented MAE |
+|----------------|--------------|---------------------|
+| 0 wind         | 0.36         | 0.33                |
+| 35 wind        | 0.72         | 0.69                |
+| 70 wind        | 1.53         | 1.43                |
+| 100 wind       | 3.19         | 3.18                |
 
----
+The delay-augmented regressor consistently reduces the average prediction error  
+across moderate and strong wind conditions, with the most noticeable improvement  
+observed under higher gust intensities.
 
 ## 6. Discussion
 
@@ -154,6 +159,8 @@ rather than pursuing a fully physical aerodynamic model.
 
 This repository is based on the original Neural-Fly implementation by Zhou et al.  
 All credit for the core methodology belongs to the original authors.
+
+The original implementation is available at: https://github.com/aerorobotics/neural-fly
 
 Our modifications are intended solely for research and educational purposes.
 
