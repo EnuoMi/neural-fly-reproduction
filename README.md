@@ -157,7 +157,7 @@ rather than pursuing a fully physical aerodynamic model.
 
 ## 7. Acknowledgement
 
-This repository is based on the original Neural-Fly implementation by Zhou et al.  
+This repository is based on the original Neural-Fly implementation by Michael O’Connell et al.  
 All credit for the core methodology belongs to the original authors.
 
 The original implementation is available at: https://github.com/aerorobotics/neural-fly
